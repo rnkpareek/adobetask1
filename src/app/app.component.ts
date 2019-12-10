@@ -10,6 +10,9 @@ export class AppComponent {
   constructor( public router: Router, ) {
     
   }
+  home(){
+    this.router.navigateByUrl('/');
+  }
   task1(){
     console.log("-------->")
     this.router.navigateByUrl('/task1');
