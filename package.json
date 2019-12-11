@@ -3,32 +3,31 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod"
+    "postinstall":"ng build --aot --target=production",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.14",
-    "@angular/cli": "~8.3.20",
-    "@angular/common": "~8.2.14",
-    "@angular/compiler": "~8.2.14",
-    "@angular/compiler-cli": "~8.2.14",
-    "@angular/core": "~8.2.14",
-    "@angular/forms": "~8.2.14",
-    "@angular/platform-browser": "~8.2.14",
-    "@angular/platform-browser-dynamic": "~8.2.14",
-    "@angular/router": "~8.2.14",
-    "bootstrap": "^4.4.1",
-    "express": "^4.17.1",
-    "path": "^0.12.7",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "typescript": "~2.3.3",
-    "zone.js": "~0.9.1"
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/cli": "~1.7.4",
+    "@angular/compiler-cli": "^5.2.0",
+    "typescript": "~2.5.3",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "core-js": "^2.4.1",
+    "express": "^4.16.3",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.20",
@@ -52,7 +51,7 @@
     "typescript": "~3.5.3"
   },
   "engines": {
-    "node":"v10.9.0",
-     "npm":"6.2.0"
+    "node":"6.9.5",
+    "npm":"5.6.0"
   }
 }

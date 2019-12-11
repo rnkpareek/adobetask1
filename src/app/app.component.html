@@ -1,11 +1,16 @@
 
 
+              <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-primary" (click)="home()" >Home</button>
+                </div>
+                <div class="btn-group" role="group">
+                  <button class="btn btn-primary"  (click)="task1()">Task1(Shooping-Karting)</button>
+                </div>
+                <div class="btn-group" role="group">
+                <button class="btn btn-primary"  (click)="task2()">Task2(Twitter-searching)</button>
+                </div>
+              </div>
 
-
-<div class="btn-group" role="group" aria-label="Basic example">
-        <button class="btn btn-primary" (click)="home()">Home</button>
-        <button class="btn btn-primary" (click)="task1()">Task1(Shooping-Karting)</button>
-        <button class="btn btn-primary" (click)="task2()">Task2(Twitter-searching)</button>
-</div>
 
 <router-outlet></router-outlet>

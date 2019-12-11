@@ -62,30 +62,15 @@ export class Task2Component implements OnInit {
           if (res.hasOwnProperty('statuses')) {
             console.log(key + " -> " + res['statuses']);
             this.searchData=res['statuses']
-            if(this.searchData.length>0){
-              this.dataNotFound=true;
-            }else{
-              this.dataNotFound=false;
-            }
+           
         }
         }
-        // this.searchData.push(res);
+        if(this.searchData.length>0){
+          this.dataNotFound=true;
+        }else{
+          this.dataNotFound=false;
+        }
         console.log("==============>",this.searchData)
-        // res.map(e => {
-        //   if (this.searchdaata.indexOf(e.searchQuery) === -1) {
-        //     this.searchdaata.push(e.searchQuery);
-        //   }
-        // });
-        // if (this.searchData.length !== 0) {
-        //   this.showData = true;
-        //   this.dataNotFound = false;
-        //   this.or = true;
-        // } else {
-        //   this.dataNotFound = true;
-        //   this.showData = false;
-        //   this.or = false;
-        // }
-
       }, error => {
         if (error.status === 500 || error.status === 404) {
           // this.openDialog();

@@ -14,15 +14,20 @@
         </div>
     </div>
 
-<div class="container" *ngIf="dataNotFound=='true'" >
+<div class="container" >
     <div *ngFor="let x of searchData">
-        <img src={{x.user.profile_image_url}}> 
+        <div class="card row">
+            <span>
+             <img src={{x.user.profile_image_url}}>
+            </span>
+       
         @{{x.user.name}}
         {{x.created_at}}
             <div class="faq-inner-table px-30 pb-20" innerHtml="{{x.source}}" >  
              </div>
              <div class="faq-inner-table px-30 pb-20" innerHtml="{{x.text}}" >
              </div>
+            </div>
     </div>
 </div>
 <div *ngIf="dataNotFound==false">
