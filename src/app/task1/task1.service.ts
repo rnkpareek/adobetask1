@@ -22,7 +22,7 @@ export class Task1Service {
     return this.http.get(this.getKart_URL);
   }
   
-   changeCount(message: string) {
+   changeCount(message: any) {
       this.messageSource.next(message)
     }
   

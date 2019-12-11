@@ -6,11 +6,14 @@ import {Task1Service} from '../task1.service';
   styleUrls: ['./mykart.component.css']
 })
 export class MykartComponent implements OnInit {
-  message:string;
+  message:any;
+  selectedData=[];
   constructor(private task1Service: Task1Service) { }
 
   ngOnInit() {
-    this.task1Service.currentMessage.subscribe(message => this.message = message)
+   var data= this.task1Service.currentMessage.subscribe(message => this.message = message)
+   this.selectedData.push(this.message);
+   console.log("-------->",this.selectedData)
   }
 
 }

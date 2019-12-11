@@ -8,8 +8,11 @@ const routes: Routes = [
   { path: 'product-list', component: Task1Component,
   children: [ 
     { path: '', redirectTo: 'Home', pathMatch: 'full' }, 
-    { path: 'Home', component: ShopinghomeComponent },
-    { path: 'mykart', component: MykartComponent }
+    { path: 'Home', component: ShopinghomeComponent,children:[
+      { path: 'mykart', component: MykartComponent }
+    ]}
+   
+    
   ] }
 ];
 
