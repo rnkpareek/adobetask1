@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Task1Service} from '../task1.service';
+message:string;
 @Component({
   selector: 'app-shopinghome',
   templateUrl: './shopinghome.component.html',
@@ -11,6 +12,7 @@ export class ShopinghomeComponent implements OnInit {
   shoppingData:any;
   KartAdded=[]
   ngOnInit() {
+    this.Task1service.currentMessage.subscribe(message => this.message = message);
     this.getKartData();
   }
   getKartData(){
@@ -22,6 +24,7 @@ export class ShopinghomeComponent implements OnInit {
   }
   addToKart(value){
   this.KartAdded.push(value);
+  this.Task1service.changeCount(value);
   }
 
 }
