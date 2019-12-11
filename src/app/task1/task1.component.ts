@@ -9,6 +9,7 @@ export class Task1Component implements OnInit {
 
   constructor(private Task1service:Task1Service) { }
 shoppingData:any;
+KartAdded=[]
   ngOnInit() {
     console.log("--------------copooo>")
     this.getKartData();
@@ -19,6 +20,13 @@ shoppingData:any;
      console.log("----------->data",res)
      this.shoppingData=res;
     })
+  }
+  addToKart(value){
+  this.KartAdded.push(value);
+  }
+
+  myKart(){
+    
   }
 
 }

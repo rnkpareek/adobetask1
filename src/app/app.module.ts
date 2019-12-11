@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import "rxjs/Rx";
 @NgModule({
   declarations: [
     AppComponent

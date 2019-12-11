@@ -1,1 +1,32 @@
-<p>task2 works!</p>
+
+<div class="container">
+<h1>@Search Twitter:</h1>
+
+<div class="bg-gray dashBanner">
+        <div class="container pos-relative">
+            <div class="row">
+                <form class="col"> 
+                    <input #search [value]="message"  [formControl]="searchQueryControl"  
+                        placeholder="Please enter your query here" class="form-control global-search">
+                        <button (click)="searchQuery()"> Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<div class="container" *ngIf="dataNotFound=='true'" >
+    <div *ngFor="let x of searchData">
+        <img src={{x.user.profile_image_url}}> 
+        @{{x.user.name}}
+        {{x.created_at}}
+            <div class="faq-inner-table px-30 pb-20" innerHtml="{{x.source}}" >  
+             </div>
+             <div class="faq-inner-table px-30 pb-20" innerHtml="{{x.text}}" >
+             </div>
+    </div>
+</div>
+<div *ngIf="dataNotFound==false">
+sorry no data found
+</div>
+
+</div>

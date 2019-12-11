@@ -1,14 +1,23 @@
-<div *ngFor="let x of shoppingData">
-<div class="card" style="width: 18rem;">
-    <img src={{x.img_url}} class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{x.name}}</h5>
-      <p>Type:{{x.type}}</p>
-      <span style='color:red;text-decoration:line-through'>
-        <span style='color:black'> {{x.price}}</span>
-      </span>
-      <a href="#" class="btn btn-primary">{{x.price}}</a>
+  
+  <button class="btn btn-primary" (click)="myKart()">Go to kart</button>
+  <p>Item added in kart {{KartAdded.length}}</p>
+  <div class="row">
+      <div class="col">
+        <div class="row " >
+            <ng-container *ngFor="let x of shoppingData | filter">
+              <div class="col card">
+                  <div class="card-body">
+                      <h5 class="card-title">{{x.name}}</h5>
+                      <p>Type:{{x.type}}</p>
+                      <span style='color:red;text-decoration:line-through'>
+                        <span style='color:black'> {{x.price}}</span>
+                      </span>
+                      <a href="#" class="btn btn-primary">{{x.net}}</a>
+                    </div>
+                    <button class="btn btn-se" (click)="addToKart(x)">Add to kart</button>
+              </div>
+            </ng-container>
+          </div>
+      </div>
     </div>
-  </div>
 
-</div>
