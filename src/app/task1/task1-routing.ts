@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, } from '@angular/router';
 import {Task1Component} from './task1.component'
-
+import {MykartComponent} from './mykart/mykart.component';
+import {ShopinghomeComponent} from './shopinghome/shopinghome.component';
 const routes: Routes = [
-  {
-    path: '',
-    component: Task1Component,
-  }
+  { path: '', redirectTo: 'product-list', pathMatch: 'full' },
+  { path: 'product-list', component: Task1Component,
+  children: [ 
+    { path: '', redirectTo: 'Home', pathMatch: 'full' }, 
+    { path: 'Home', component: ShopinghomeComponent },
+    { path: 'mykart', component: MykartComponent }
+  ] }
 ];
-
 
 
 @NgModule({
