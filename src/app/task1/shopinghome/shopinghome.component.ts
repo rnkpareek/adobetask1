@@ -24,7 +24,7 @@ export class ShopinghomeComponent implements OnInit {
   }
   addToKart(value){
   this.KartAdded.push(value);
-  this.Task1service.changeCount(value);
+  this.Task1service.changeCount(this.KartAdded);
   }
 
 }

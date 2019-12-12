@@ -1,1 +1,11 @@
-<p>mykart works!</p>
+<p>My Karts</p>
+<div *ngFor="let x of selectedData">
+    <div class="card">
+        <span><button (click)="remove(x.id)">x</button></span>
+            <p>Name:{{x.name}}</p>
+            <p>Price :{{x.net}}</p>
+            <p>Amount:{{x.price}}</p>
+    </div>
+   
+</div>
+<p>Total:{{Total}}</p>

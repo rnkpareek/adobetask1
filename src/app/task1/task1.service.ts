@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
   providedIn: 'root'
 })
 export class Task1Service {
-    private messageSource = new BehaviorSubject<number>(0);
+    private messageSource = new BehaviorSubject<any>(0);
         currentMessage = this.messageSource.asObservable();
     private getKart_URL="https://api.myjson.com/bins/qhnfp"
 
