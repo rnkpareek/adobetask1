@@ -14,8 +14,10 @@ export class MykartComponent implements OnInit {
   ngOnInit() {
    var data= this.task1Service.currentMessage.subscribe(message => this.message = message)
    this.selectedData=this.message;
-   console.log("-------->",this.selectedData)
-   this.getTotal();
+  if(this.selectedData.length>0){
+    this.getTotal();
+  }
+  
   
   }
 
